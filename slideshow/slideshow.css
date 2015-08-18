@@ -1,0 +1,30 @@
+article, aside, figure, figcaption, footer, header, nav, section 
+{
+    display: block;
+}
+body 
+{
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding: 20px;
+	width: 550px;
+	border: 3px solid blue;
+}
+img
+{
+	margin: 0 auto;
+	display: block;
+	height: 250px;
+}
+h1
+{
+	color:blue;
+}
+h2
+{
+	font-size: 125%;
+}
+ul
+{
+	display:none;
+}
