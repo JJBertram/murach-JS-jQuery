@@ -1,41 +1,21 @@
-(function(){
-	var $ = function(id){
-		return document.getElementById(id);
-	}//end $ func
+$(function(){
+//preload images
+	$("#image_list a").each(function(){
+		var swappedImage = new Image();
+		swappedImage.src = $(this).attr("href");
+	});//end each func
+//event handlers for links
+	/*$("#image_list a").click(function(e){
+		var imgURL = $(this).attr("href");
+		$("#image").attr("src", imgURL);
+		var caption = $(this).attr("title");
+		$("#caption").text(caption);
+		e.preventDefault();
+	});//end click event*/
 
-	window.onload = function()
-	{
-		var listNode = $("image_list"); //ul element
-		var captionNode = $("caption"); //main image text, h2 element
-		var imageNode = $("image"); //main img element
-		var imageLinks = listNode.getElementsByTagName("a");
-		var i, linkNode, image;
-		//preload images
-		for(i = 0; i < imageLinks.length; i++)
-		{
-			linkNode = imageLinks[i]
-			linkNode.onclick = function(e)
-			{
-				var link = this;
-				imageNode.src = link.getAttribute("href");
-				captionNode.firstChild.nodeValue = link.getAttribute("title");
-			//cancel default click event
-				if(!e)
-				{
-					e = window.event; //for ie
-				}
-				if(e.preventDefault)
-				{
-					e.preventDefault();
-				}
-				else
-				{
-					e.returnValue = false;
-				}
-			}//end onclick func
-			image = new Image();
-			image.src = linkNode.href;
-		}//end for loop
-		$("first_link").focus();
-	}//end window.onload function
-})();//end anon wrapper func
+	$("#image_list a").click(function(e){
+		$("#caption").text($(this).attr("title"));
+		$("#image").attr("src", $(this).attr("href"));
+		e.preventDefault();
+	});//end click
+});//end ready func

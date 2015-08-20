@@ -29,3 +29,8 @@ li
 	padding-right: 10px;
 	display: inline;
 }
+#image
+{
+	display: block;
+	margin: 0 auto;
+}

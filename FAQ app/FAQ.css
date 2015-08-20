@@ -31,10 +31,6 @@ h2.minus
 }
 div
 {
-	display: none;
-}
-div.open
-{
 	display: block;
 }
 a
