@@ -5,7 +5,7 @@
 	<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
 	<title>A Simple Slideshow</title>
 	<link rel = "stylesheet" href = "slideshow.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<script src = "slideshow.js"></script>
 </head>
@@ -13,14 +13,14 @@
 	<section>
 		<h1>Fishing Slide Show Demo</h1>
 		<h2 id = "output">Catch and Release on the Big Horn</h2>
-		<ul id = "image_list">
-			<li><a href = "images/casting1.jpg" title = "Casting on the Upper Kings"></a></li>
-			<li><a href = "images/casting2.jpg" title = "Casting on the Lower Kings"></a></li>
-			<li><a href = "images/catchrelease.jpg" title = "Catch and Release on the Big Horn"></a></li>
-			<li><a href = "images/fish.jpg" title = "Catching on the South Fork"></a></li>
-			<li><a href = "images/lures.jpg" title = "The Lures for Catching"></a></li>
-		</ul>
-		<p><img src = "images/casting1.jpg" alt = "" id = "image"></p>
+		<div id="slides"> 
+	        <img src="images/casting1.jpg" alt="Casting on the Upper Kings">
+	        <img src="images/casting2.jpg" alt="Casting on the Lower Kings">
+	        <img src="images/catchrelease.jpg" alt="Catch and Release on the Big Horn">
+	        <img src="images/fish.jpg" alt="Catching on the South Fork">
+	        <img src="images/lures.jpg" alt="The Lures for Catching">
+  		</div>
+		<img src = "images/casting1.jpg" alt = "" id = "image">
 	</section>
 </body>
 </html>
