@@ -1,8 +1,9 @@
 $(function(){
 	var nextSlide = $("#slides img:first-child");
+	var status = $("#status");
 	var nextCaption;
 	var nextSlideSrc;
-	setInterval(function ()
+	var runSlideShow = function ()
 		{
 			$("#output").fadeOut(1000);
 			$("#image").fadeOut(1000, function() 
@@ -19,7 +20,21 @@ $(function(){
 					$("#output").text(nextCaption).fadeIn(1000);
 				}//end image fadeout callback
 			)//close image fadeout ()
-		}, 
-	3000);//end setInterval function param
+		}
+	//start slideshow
+	var timer1 = setInterval(runSlideShow, 3000);
+	//starting and stopping slide show
+	$("#image").click(function(){
+		if(timer1 != null)
+		{
+			clearInterval(timer1);
+			timer1 = null;
+		}
+		else
+		{	
+			timer1 = setInterval(runSlideShow, 3000);
+		}
+	});//end click
+
 
 })//end ready

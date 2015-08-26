@@ -16,41 +16,35 @@ body {
 section {
 	padding: 15px 25px;
 }
-h1 { 
-	font-size: 150%;
+#faqs h1 { 
+	position: relative;
+	left: -175px;
+	font-size: 75%;
+	opacity: .2;
+	color: blue;
 }
-h2
-{
+h2 {
+	font-size: 120%;
 	padding: .25em 0 .25em 25px;
-	cursor:pointer;
+	cursor: pointer;
 	background: url(images/plus.png) no-repeat left center;
 }
-h2.minus
-{
+h2.minus {
 	background: url(images/minus.png) no-repeat left center;
 }
-div
-{
+div {
+	display: none;
+}
+div.open {
 	display: block;
-}
-a
-{
-	color: black;
-	text-decoration: none;
-}
-a:focus, a:hover
-{
-	color: #0099FF;
 }
 ul {
 	padding-left: 45px;
 }
-li 
-{
+li {
 	padding-bottom: .25em;
 }
-p 
-{
+p {
 	padding-bottom: .25em;
 	padding-left: 25px;
 }
